@@ -4,6 +4,30 @@ const navMenu = document.querySelector('.nav-menu');
 const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
 const sections = [...document.querySelectorAll('main section[id]')];
 
+const tableauProfileUrl = 'https://public.tableau.com/app/profile/mohammad.maliki.rafli/vizzes';
+
+const addExternalLink = (container, label, url, className = '') => {
+  if (!container || container.querySelector(`a[href="${url}"]`)) return;
+
+  const link = document.createElement('a');
+  link.href = url;
+  link.textContent = `${label} ↗`;
+  link.target = '_blank';
+  link.rel = 'noreferrer';
+  if (className) link.className = className;
+  container.appendChild(link);
+};
+
+addExternalLink(document.querySelector('.about-links'), 'Tableau Public', tableauProfileUrl);
+addExternalLink(document.querySelector('.contact-actions'), 'Tableau Public', tableauProfileUrl, 'text-link');
+
+const toolBelt = document.querySelector('.tool-belt');
+if (toolBelt && ![...toolBelt.children].some(item => item.textContent.trim() === 'Tableau')) {
+  const tableauTool = document.createElement('span');
+  tableauTool.textContent = 'Tableau';
+  toolBelt.appendChild(tableauTool);
+}
+
 const updateHeader = () => {
   header?.classList.toggle('scrolled', window.scrollY > 24);
 };
