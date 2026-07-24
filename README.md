@@ -10,7 +10,14 @@ https://mohmalikirafli.github.io/
 
 ## Current positioning
 
-Mohammad Maliki Rafli is a Master of Public Health graduate student at Universitas Airlangga specializing in Biostatistics and Health Data Science. The website presents applied work across clinical data, health services, spatial epidemiology, evidence synthesis, customer insights, demand forecasting, and inventory analytics.
+Mohammad Maliki Rafli is a Master of Public Health graduate student at Universitas Airlangga specializing in Biostatistics and Health Data Science. The website presents applied work across clinical data, health services, spatial epidemiology, evidence synthesis, customer insights, demand forecasting, inventory analytics, and data visualization.
+
+## Professional profiles
+
+- GitHub: https://github.com/mohmalikirafli
+- LinkedIn: https://www.linkedin.com/in/malikirafli
+- Tableau Public: https://public.tableau.com/app/profile/mohammad.maliki.rafli/vizzes
+- Medium: https://medium.com/@malikirafli
 
 ## Included sections
 
@@ -19,7 +26,7 @@ Mohammad Maliki Rafli is a Master of Public Health graduate student at Universit
 - Core expertise and technical stack
 - Six selected projects drawn from nine public portfolio repositories
 - Analytical and research direction
-- GitHub, LinkedIn, Medium, and email contact links
+- GitHub, LinkedIn, Tableau Public, Medium, and email contact links
 - Responsive navigation and subtle scroll animations
 - Accessibility support, reduced-motion handling, SEO metadata, and structured data
 
@@ -52,7 +59,7 @@ http://localhost:8000
 
 - Main content: `index.html`
 - Colors, layout, and project visuals: `styles.css`
-- Navigation and animations: `script.js`
+- Navigation, animations, and external-profile links: `script.js`
 - Browser icon: `assets/favicon.svg`
 
 ## Design and originality
