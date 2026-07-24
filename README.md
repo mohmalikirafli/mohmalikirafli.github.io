@@ -1,35 +1,38 @@
 # Mohammad Maliki Rafli — Personal Portfolio
 
-A responsive static portfolio for **Mohammad Maliki Rafli**, focused on **Biostatistics, Public Health Analytics, and Health Data Science**.
+A responsive static portfolio for **Mohammad Maliki Rafli**, focused on **Biostatistics, Health Data Science, Public Health Research, Consumer Insights, and Applied Analytics**.
 
 ## Live site
-
-The website is published through the personal GitHub Pages repository:
 
 ```text
 https://mohmalikirafli.github.io/
 ```
 
+## Current positioning
+
+Mohammad Maliki Rafli is a Master of Public Health graduate student at Universitas Airlangga specializing in Biostatistics and Health Data Science. The website presents applied work across clinical data, health services, spatial epidemiology, evidence synthesis, customer insights, demand forecasting, and inventory analytics.
+
 ## Included sections
 
-- Hero and professional positioning
-- About
-- Expertise and technical stack
-- Six featured projects
-- Research interests
-- Contact links
+- Professional hero and portfolio summary
+- Academic and analytical profile
+- Core expertise and technical stack
+- Six selected projects drawn from nine public portfolio repositories
+- Analytical and research direction
+- GitHub, LinkedIn, Medium, and email contact links
 - Responsive navigation and subtle scroll animations
-- Accessibility support and reduced-motion handling
-- Open Graph and SEO metadata
+- Accessibility support, reduced-motion handling, SEO metadata, and structured data
 
-## Featured repositories
+## Selected projects
 
 1. Chronic Kidney Disease Prediction Using Machine Learning
 2. JKN Participant Typology and FKTP Utilization Using Latent Class Analysis
-3. GWNBR Modeling of Leprosy Cases in Central Java
-4. BMI and Fasting Blood Glucose Regression
-5. Doctor Distribution in East Java
-6. Tokopedia E-Commerce Analytics
+3. Heart Failure Survival Analysis Using Kaplan–Meier and Cox Regression
+4. FMCG Customer Insights: Consumer Segmentation and Purchase Drivers
+5. Beauty FMCG Demand Forecasting and Inventory Optimization
+6. GWNBR Modeling of Leprosy Cases in Central Java
+
+Additional repositories remain accessible through the GitHub profile, including BMI–fasting glucose regression, doctor-distribution analysis, and Tokopedia e-commerce analytics.
 
 ## Local preview
 
@@ -48,13 +51,13 @@ http://localhost:8000
 ## Editing guide
 
 - Main content: `index.html`
-- Colors and layout: `styles.css`
+- Colors, layout, and project visuals: `styles.css`
 - Navigation and animations: `script.js`
 - Browser icon: `assets/favicon.svg`
 
-## Credits and originality
+## Design and originality
 
-The information architecture was informed by modern data-science portfolio conventions and the referenced Nicole L. Mark portfolio. The visual system, copy, layout, and implementation in this project are original and tailored to Mohammad Maliki Rafli.
+The information architecture follows modern data-science portfolio conventions. The visual system, content hierarchy, copy, illustrations, and implementation are original and tailored to Mohammad Maliki Rafli's academic and professional portfolio.
 
 ## License
 
