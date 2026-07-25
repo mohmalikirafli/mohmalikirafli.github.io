@@ -4,9 +4,8 @@ A responsive static portfolio for **Mohammad Maliki Rafli**, focused on **Biosta
 
 ## Live site
 
-```text
-https://mohmalikirafli.github.io/
-```
+- Portfolio: https://mohmalikirafli.github.io/
+- Web CV: https://mohmalikirafli.github.io/cv/
 
 ## Current positioning
 
@@ -19,7 +18,9 @@ Mohammad Maliki Rafli is a Master of Public Health graduate student at Universit
 - Tableau Public: https://public.tableau.com/app/profile/mohammad.maliki.rafli/vizzes
 - Medium: https://medium.com/@malikirafli
 
-## Included sections
+## Included pages and sections
+
+### Portfolio home
 
 - Professional hero and portfolio summary
 - Academic and analytical profile
@@ -27,8 +28,17 @@ Mohammad Maliki Rafli is a Master of Public Health graduate student at Universit
 - Six selected projects drawn from nine public portfolio repositories
 - Analytical and research direction
 - GitHub, LinkedIn, Tableau Public, Medium, and email contact links
-- Responsive navigation and subtle scroll animations
-- Accessibility support, reduced-motion handling, SEO metadata, and structured data
+
+### Curriculum vitae
+
+- Education
+- Professional experience
+- Selected analytical projects
+- Research and academic focus
+- Skills and technologies
+- Training and credentials
+- Print-optimized layout with a **Print / Save as PDF** action
+- Public-safe contact presentation without residential address, date of birth, or telephone number
 
 ## Selected projects
 
@@ -53,18 +63,21 @@ Then open:
 
 ```text
 http://localhost:8000
+http://localhost:8000/cv/
 ```
 
 ## Editing guide
 
-- Main content: `index.html`
-- Colors, layout, and project visuals: `styles.css`
+- Portfolio content: `index.html`
+- CV content: `cv/index.html`
+- Portfolio colors, layout, and project visuals: `styles.css`
+- CV screen and print layout: `cv.css`
 - Navigation, animations, and external-profile links: `script.js`
 - Browser icon: `assets/favicon.svg`
 
 ## Design and originality
 
-The information architecture follows modern data-science portfolio conventions. The visual system, content hierarchy, copy, illustrations, and implementation are original and tailored to Mohammad Maliki Rafli's academic and professional portfolio.
+The information architecture follows modern data-science portfolio conventions and uses the referenced CV page only as structural inspiration. The visual system, content hierarchy, copy, responsive implementation, and print layout are original and tailored to Mohammad Maliki Rafli's academic and professional portfolio.
 
 ## License
 
