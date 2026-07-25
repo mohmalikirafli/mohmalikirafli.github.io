@@ -1,7 +1,6 @@
 const header = document.querySelector('.site-header');
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
-const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
 const sections = [...document.querySelectorAll('main section[id]')];
 
 const tableauProfileUrl = 'https://public.tableau.com/app/profile/mohammad.maliki.rafli/vizzes';
@@ -18,6 +17,19 @@ const addExternalLink = (container, label, url, className = '') => {
   container.appendChild(link);
 };
 
+const addInternalLink = (container, label, url, options = {}) => {
+  if (!container || container.querySelector(`a[href="${url}"]`)) return;
+
+  const link = document.createElement('a');
+  link.href = url;
+  link.textContent = label;
+  if (options.className) link.className = options.className;
+  if (options.before) container.insertBefore(link, container.firstElementChild);
+  else container.appendChild(link);
+};
+
+addInternalLink(navMenu, 'CV', 'cv/', { before: false });
+addInternalLink(document.querySelector('.hero-actions'), 'View CV', 'cv/', { className: 'button button-secondary' });
 addExternalLink(document.querySelector('.about-links'), 'Tableau Public', tableauProfileUrl);
 addExternalLink(document.querySelector('.contact-actions'), 'Tableau Public', tableauProfileUrl, 'text-link');
 
@@ -27,6 +39,8 @@ if (toolBelt && ![...toolBelt.children].some(item => item.textContent.trim() ===
   tableauTool.textContent = 'Tableau';
   toolBelt.appendChild(tableauTool);
 }
+
+const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
 
 const updateHeader = () => {
   header?.classList.toggle('scrolled', window.scrollY > 24);
@@ -39,7 +53,7 @@ navToggle?.addEventListener('click', () => {
   navMenu?.classList.toggle('open', !isOpen);
 });
 
-navLinks.forEach(link => {
+navMenu?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navToggle?.setAttribute('aria-expanded', 'false');
     navToggle?.setAttribute('aria-label', 'Open navigation');
