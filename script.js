@@ -48,6 +48,20 @@ const liveProjects = [
   }
 ];
 
+const applyProjectLinkStyle = link => {
+  link.style.display = 'inline-flex';
+  link.style.alignItems = 'center';
+  link.style.color = 'var(--lime)';
+  link.style.fontWeight = '700';
+  link.style.margin = '0';
+  link.style.padding = '0';
+  link.style.border = '0';
+  link.style.background = 'transparent';
+  link.style.minHeight = 'auto';
+  link.style.fontSize = 'inherit';
+  link.style.boxShadow = 'none';
+};
+
 liveProjects.forEach(({ repositoryUrl, liveUrl, liveLabel }) => {
   const repositoryLink = document.querySelector(`.project-content > a[href="${repositoryUrl}"]`);
   if (!repositoryLink || repositoryLink.parentElement.querySelector(`a[href="${liveUrl}"]`)) return;
@@ -56,25 +70,20 @@ liveProjects.forEach(({ repositoryUrl, liveUrl, liveLabel }) => {
   actions.className = 'project-actions';
   actions.style.display = 'flex';
   actions.style.flexWrap = 'wrap';
-  actions.style.gap = '10px';
-  actions.style.marginTop = '8px';
+  actions.style.alignItems = 'center';
+  actions.style.gap = '24px';
+  actions.style.marginTop = '0';
 
   const liveLink = document.createElement('a');
   liveLink.href = liveUrl;
   liveLink.textContent = `${liveLabel} ↗`;
   liveLink.target = '_blank';
   liveLink.rel = 'noreferrer';
-  liveLink.className = 'button button-primary';
-  liveLink.style.minHeight = '44px';
-  liveLink.style.padding = '0 16px';
-  liveLink.style.fontSize = '13px';
+  applyProjectLinkStyle(liveLink);
 
   repositoryLink.textContent = 'View repository ↗';
-  repositoryLink.className = 'button button-secondary';
-  repositoryLink.style.minHeight = '44px';
-  repositoryLink.style.padding = '0 16px';
-  repositoryLink.style.fontSize = '13px';
-  repositoryLink.style.marginTop = '0';
+  repositoryLink.className = '';
+  applyProjectLinkStyle(repositoryLink);
 
   repositoryLink.parentElement.insertBefore(actions, repositoryLink);
   actions.append(liveLink, repositoryLink);
