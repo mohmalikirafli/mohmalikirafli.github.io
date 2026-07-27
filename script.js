@@ -40,6 +40,46 @@ if (toolBelt && ![...toolBelt.children].some(item => item.textContent.trim() ===
   toolBelt.appendChild(tableauTool);
 }
 
+const liveProjects = [
+  {
+    repositoryUrl: 'https://github.com/mohmalikirafli/indonesia-child-nutrition-map',
+    liveUrl: 'https://mohmalikirafli.github.io/indonesia-child-nutrition-map/',
+    liveLabel: 'View live dashboard'
+  }
+];
+
+liveProjects.forEach(({ repositoryUrl, liveUrl, liveLabel }) => {
+  const repositoryLink = document.querySelector(`.project-content > a[href="${repositoryUrl}"]`);
+  if (!repositoryLink || repositoryLink.parentElement.querySelector(`a[href="${liveUrl}"]`)) return;
+
+  const actions = document.createElement('div');
+  actions.className = 'project-actions';
+  actions.style.display = 'flex';
+  actions.style.flexWrap = 'wrap';
+  actions.style.gap = '10px';
+  actions.style.marginTop = '8px';
+
+  const liveLink = document.createElement('a');
+  liveLink.href = liveUrl;
+  liveLink.textContent = `${liveLabel} ↗`;
+  liveLink.target = '_blank';
+  liveLink.rel = 'noreferrer';
+  liveLink.className = 'button button-primary';
+  liveLink.style.minHeight = '44px';
+  liveLink.style.padding = '0 16px';
+  liveLink.style.fontSize = '13px';
+
+  repositoryLink.textContent = 'View repository ↗';
+  repositoryLink.className = 'button button-secondary';
+  repositoryLink.style.minHeight = '44px';
+  repositoryLink.style.padding = '0 16px';
+  repositoryLink.style.fontSize = '13px';
+  repositoryLink.style.marginTop = '0';
+
+  repositoryLink.parentElement.insertBefore(actions, repositoryLink);
+  actions.append(liveLink, repositoryLink);
+});
+
 const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
 
 const updateHeader = () => {
