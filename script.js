@@ -34,10 +34,16 @@ addExternalLink(document.querySelector('.about-links'), 'Tableau Public', tablea
 addExternalLink(document.querySelector('.contact-actions'), 'Tableau Public', tableauProfileUrl, 'text-link');
 
 const toolBelt = document.querySelector('.tool-belt');
-if (toolBelt && ![...toolBelt.children].some(item => item.textContent.trim() === 'Tableau')) {
-  const tableauTool = document.createElement('span');
-  tableauTool.textContent = 'Tableau';
-  toolBelt.appendChild(tableauTool);
+if (toolBelt) {
+  [...toolBelt.children].forEach(item => {
+    if (['RevMan', 'GRADEpro'].includes(item.textContent.trim())) item.remove();
+  });
+
+  if (![...toolBelt.children].some(item => item.textContent.trim() === 'Tableau')) {
+    const tableauTool = document.createElement('span');
+    tableauTool.textContent = 'Tableau';
+    toolBelt.appendChild(tableauTool);
+  }
 }
 
 const liveProjects = [
