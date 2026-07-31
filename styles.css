@@ -31,7 +31,8 @@ button,input,textarea { font:inherit; }
 .nav { min-height:78px; display:flex; align-items:center; justify-content:space-between; }
 .brand { display:inline-flex; align-items:center; gap:11px; font-family:Manrope,sans-serif; font-weight:800; letter-spacing:-.02em; }
 .brand-mark { width:40px; aspect-ratio:1; display:grid; place-items:center; border:1px solid rgba(111,231,221,.45); background:rgba(111,231,221,.08); color:var(--cyan); border-radius:12px; font-size:13px; letter-spacing:.06em; }
-.brand-text { color:#fff; }
+.brand-text { color:#fff; font-size:0; white-space:nowrap; }
+.brand-text::after { content:"Mohammad Maliki Rafli"; font-size:16px; }
 .nav-menu { display:flex; align-items:center; gap:30px; font-size:14px; font-weight:600; color:#b9c4d3; }
 .nav-menu a { transition:color .2s ease; }
 .nav-menu a:hover,.nav-menu a.active { color:var(--cyan); }
