@@ -46,10 +46,75 @@ if (toolBelt) {
   }
 }
 
+const portfolioCount = document.querySelector('.hero-proof div:first-child strong');
+if (portfolioCount) portfolioCount.textContent = '12';
+
+const projectGrid = document.querySelector('.project-grid');
+const jknRepositoryLink = document.querySelector('a[href="https://github.com/mohmalikirafli/jkn-fktp-latent-class-analysis"]');
+const insertBeforeCard = jknRepositoryLink?.closest('.project-card') || null;
+
+const latestProjectCards = [
+  {
+    repositoryUrl: 'https://github.com/mohmalikirafli/public-health-ai-audit-lab',
+    html: `
+      <article class="project-card reveal visible">
+        <div class="project-visual visual-insights" style="background:linear-gradient(145deg,#2d2b68,#17485f)">
+          <span class="visual-label">PUBLIC HEALTH AI EVALUATION</span>
+          <div class="metric-orbit" style="width:190px">
+            <div class="orbit-center"><strong style="font-size:30px">7.3</strong><span>/ 12 mean score</span></div>
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-top"><span>AI Audit & Evaluation</span><span>Public Health</span></div>
+          <h3>Public Health AI Audit Lab</h3>
+          <p>An evidence-grounded six-case benchmark for auditing AI-generated public-health answers across epidemiology, biostatistics, health equity, surveillance, policy, causal reasoning, citation integrity, safety, and uncertainty.</p>
+          <div class="project-facts"><span>6 scenarios</span><span>12-point rubric</span><span>2 critical errors</span></div>
+          <a href="https://github.com/mohmalikirafli/public-health-ai-audit-lab" target="_blank" rel="noreferrer">View repository ↗</a>
+        </div>
+      </article>`
+  },
+  {
+    repositoryUrl: 'https://github.com/mohmalikirafli/surabaya-ssk-readiness',
+    html: `
+      <article class="project-card reveal visible">
+        <div class="project-visual visual-spatial" style="background:linear-gradient(145deg,#173a4b,#2c4d59)">
+          <span class="visual-label">PROGRAM IMPLEMENTATION DASHBOARD</span>
+          <svg viewBox="0 0 320 180" role="img" aria-label="Abstract school implementation readiness map">
+            <path d="M28 126 C72 93,96 118,136 72 S203 99,286 43" />
+            <path d="M31 145 C77 119,117 145,157 107 S224 132,289 83" />
+            <circle cx="66" cy="111" r="7"/><circle cx="129" cy="88" r="7"/><circle cx="197" cy="105" r="7"/><circle cx="260" cy="66" r="7"/>
+          </svg>
+          <strong class="visual-number">166</strong>
+        </div>
+        <div class="project-content">
+          <div class="project-top"><span>Implementation Analytics</span><span>JavaScript</span></div>
+          <h3>Surabaya SSK Implementation Readiness</h3>
+          <p>An interactive bilingual dashboard translating a 166-school assessment into implementation-readiness insights, school-level mapping, filters, regional comparisons, barriers, and actionable programme priorities.</p>
+          <div class="project-facts"><span>166 schools</span><span>21 map markers</span><span>χ² p = 0.007</span></div>
+          <a href="https://github.com/mohmalikirafli/surabaya-ssk-readiness" target="_blank" rel="noreferrer">View repository ↗</a>
+        </div>
+      </article>`
+  }
+];
+
+latestProjectCards.forEach(project => {
+  if (!projectGrid || document.querySelector(`a[href="${project.repositoryUrl}"]`)) return;
+  const template = document.createElement('template');
+  template.innerHTML = project.html.trim();
+  const card = template.content.firstElementChild;
+  projectGrid.insertBefore(card, insertBeforeCard);
+});
+
 const liveProjects = [
   {
     repositoryUrl: 'https://github.com/mohmalikirafli/indonesia-child-nutrition-map',
     liveUrl: 'https://mohmalikirafli.github.io/indonesia-child-nutrition-map/',
+    liveLabel: 'View live dashboard'
+  },
+  {
+    repositoryUrl: 'https://github.com/mohmalikirafli/surabaya-ssk-readiness',
+    liveUrl: 'https://mohmalikirafli.github.io/surabaya-ssk-readiness/',
     liveLabel: 'View live dashboard'
   }
 ];
