@@ -62,6 +62,18 @@ const translations = {
   }
 };
 
+const aiRepositoryLink = document.querySelector('a[href="https://github.com/mohmalikirafli/public-health-ai-audit-lab"]');
+const aiLiveUrl = 'https://mohmalikirafli.github.io/public-health-ai-audit-lab/';
+if (aiRepositoryLink && !document.querySelector(`a[href="${aiLiveUrl}"]`)) {
+  const aiLiveLink = document.createElement('a');
+  aiLiveLink.href = aiLiveUrl;
+  aiLiveLink.target = '_blank';
+  aiLiveLink.rel = 'noreferrer';
+  aiLiveLink.dataset.i18n = 'viewLive';
+  aiLiveLink.textContent = 'View live dashboard ↗';
+  aiRepositoryLink.before(aiLiveLink);
+}
+
 const englishText = new Map();
 document.querySelectorAll('[data-i18n]').forEach(element => englishText.set(element, element.textContent));
 
