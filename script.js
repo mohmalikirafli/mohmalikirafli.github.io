@@ -5,6 +5,12 @@ const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const languageButtons = [...document.querySelectorAll('.language-option')];
 
+const profileImage = document.querySelector('.portrait-wrap img');
+if (profileImage) {
+  profileImage.src = 'assets/profile-2026.jpg';
+  profileImage.alt = 'Mohammad Maliki Rafli';
+}
+
 const uiStyles = document.createElement('style');
 uiStyles.textContent = `
   .brand-text::after{content:none!important}.brand-text{font-size:16px!important;white-space:nowrap}
