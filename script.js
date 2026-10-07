@@ -7,7 +7,7 @@ const languageButtons = [...document.querySelectorAll('.language-option')];
 
 const profileImage = document.querySelector('.portrait-wrap img');
 if (profileImage) {
-  profileImage.src = 'assets/profile-2026.jpg';
+  profileImage.src = 'assets/profile-2026.jpg?v=20261007-1745';
   profileImage.alt = 'Mohammad Maliki Rafli';
 }
 
